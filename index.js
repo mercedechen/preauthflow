@@ -8,7 +8,12 @@ submitButton.addEventListener("click", () => {
 
 function calculateDates() {
   // Date() is a constructor that creates a Date object. When called as a function, it returns a string representing the current time.
-  const dateSelected = new Date(dateInput.value);
+  const selectedDate = new Date(dateInput.value);
+
+  if (isNaN(selectedDate)) {
+    alert('Please select a valid date!');
+    return;
+  }
 
   // Days to calculate
   const daysToSubtract = [3, 7, 12, 13, 14, 15, 26, 27, 28];
@@ -16,7 +21,7 @@ function calculateDates() {
   //.forEach() Array method executes a provided function once for each array element.
   daysToSubtract.forEach(day => {
     // Creates a copy of the Date object so that each calculation starts from the unmodified state of the initial date selected
-    const dateCopy = new Date(dateSelected);
+    const dateCopy = new Date(selectedDate);
 
     // .setDate() works with Date objects only and sets the day of the month according to local time
     // .getDate() works with Date objects only and returns the day of the month according to local time
