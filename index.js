@@ -1,12 +1,15 @@
 const dateInput = document.getElementById("dateInput");
 const submitButton = document.getElementById("submitButton");
+const decreaseBtn = document.getElementById("decreaseBtn");
+const increaseBtn = document.getElementById("increaseBtn");
+const counter = document.getElementById("counter");
+let count = 0;
 
-// Adds an event listener for when the "Calculate" button is clicked. Once clicked, runs the calculateDates function.
+// Adds an event listener for when the "Calculate" button is clicked. When clicked, it runs the calculateDates() function.
 submitButton.addEventListener("click", () => {
   calculateDates();
   // submitButton.disabled = true;
 });
-
 
 function calculateDates() {
   // Date() is a constructor that creates a Date object. When called as a function, it returns a string representing the current time.
@@ -45,4 +48,16 @@ function calculateDates() {
     listItem.textContent = `Day ${day}: ${month}/${dayOfMonth}/${year}`;
     results.appendChild(listItem);
   });
-}
+};
+
+// When user clicks on increase button, counter will increase by 1.
+increaseBtn.onclick = function() {
+  count++;
+  counter.textContent = count;
+};
+
+// When user clicks on decrease button, counter will decrease by 1.
+decreaseBtn.onclick = function() {
+  count--;
+  counter.textContent = count;
+};
