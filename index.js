@@ -1,15 +1,25 @@
 const dateInput = document.getElementById("dateInput");
 const submitButton = document.getElementById("submitButton");
-const decreaseBtn = document.getElementById("decreaseBtn");
 const increaseBtn = document.getElementById("increaseBtn");
+const decreaseBtn = document.getElementById("decreaseBtn");
 const counter = document.getElementById("counter");
 let count = 0;
 
-// Adds an event listener for when the "Calculate" button is clicked. When clicked, it runs the calculateDates() function.
+// Adds an event listener and waits for when user clicks on "calculate" button to run the calculateDates() function
 submitButton.addEventListener("click", () => {
   calculateDates();
   // submitButton.disabled = true;
 });
+
+// Adds an event listener and waits for when user clicks on "+" button to run the increaseCounter() function
+increaseBtn.addEventListener("click", () => {
+  increaseCounter();
+});
+
+// Adds an event listener that waits for when user clicks on "-" button to run the decreaseCounter() function
+decreaseBtn.addEventListener("click", () => {
+  decreaseCounter();
+})
 
 function calculateDates() {
   // Date() is a constructor that creates a Date object. When called as a function, it returns a string representing the current time.
@@ -50,14 +60,16 @@ function calculateDates() {
   });
 };
 
-// When user clicks on increase button, counter will increase by 1.
-increaseBtn.onclick = function() {
+// Increments the counter by 1
+function increaseCounter() {
   count++;
   counter.textContent = count;
 };
 
-// When user clicks on decrease button, counter will decrease by 1.
-decreaseBtn.onclick = function() {
-  count--;
-  counter.textContent = count;
+// Decrements the counter by 1 only if the counter value is greater than 0
+function decreaseCounter() {
+  if (count > 0){
+    count--;
+    counter.textContent = count;
+  }
 };
