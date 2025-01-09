@@ -1,1 +1,2 @@
-# preauth-app
+# PreAuthFlow
+This productivity application was created to alleviate the stress and demands associated with being a Pre-Authorization Coordinator. It was specifically designed for my current field of work.
