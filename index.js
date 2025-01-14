@@ -3,6 +3,7 @@ const submitButton = document.getElementById("submitButton");
 const increaseBtn = document.getElementById("increaseBtn");
 const decreaseBtn = document.getElementById("decreaseBtn");
 const counter = document.getElementById("counter");
+const available = document.getElementById("available");
 let count = 0;
 
 // Adds an event listener and waits for when user clicks on "calculate" button to run the calculateDates() function
