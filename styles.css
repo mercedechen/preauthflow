@@ -1,3 +1,15 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 body {
   font-family: 'Calibri', Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -88,8 +100,37 @@ ol {
 }
 
 th {
-  font-size: 10pt;
+  font-size: 12px;
   font-weight: 300;
   text-align: left;
   text-transform: uppercase;
+}
+
+td {
+  padding: 0;
+}
+
+td input {
+  font-family: 'Calibri', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #43474A;
+  margin-right: 50px;
+  padding: 4px 13px;
+  border: none;
+  border-radius: 3px;
+}
+
+#livein, #split, #available, #remaining {
+  width: 20px;
+  text-align: center;
+}
+
+#decreaseBtn, #increaseBtn {
+  border: 1px solid #FFFFFF;
+  border-radius: 15px;
+  width: 23px;
+  height: 23px;
+  margin: 5px 10px;
+  background-color: #73AF01;
+  color: #FFFFFF;
 }
