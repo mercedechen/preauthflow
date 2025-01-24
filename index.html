@@ -8,78 +8,68 @@
   <script src="index.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>PreAuthFlow</h1>
-  </header>
+  <h1>PreAuthFlow</h1>
 
-  <section>
-    <h2>Calendar</h2>
-
-    <label for="dateInput">Today's Date</label>
-    <input type="date" id="dateInput">
-    <button id="submitButton">→</button>
-
-    <ul id="results">
-      <!-- <li>Day 3</li>
-      <li>Day 7</li>
-      <li>Day 12</li>
-      <li>Day 13</li>
-      <li>Day 14</li>
-      <li>Day 15</li>
-      <li>Day 26</li>
-      <li>Day 27</li>
-      <li>Day 28</li> -->
-    </ul>
-  </section>
-
-  <section>
-    <h2>Emails</h2>
-    <ol>
-      <li>
-        <input type="checkbox" id="hf02">
-        <label for="hf02">HF02 RFS Report</label>
-      </li>
-      <li>
-        <input type="checkbox" id="hf">
-        <label for="hf">HF/MAP RFS Report</label>
-      </li>
-      <li>
-        <input type="checkbox" id="oorfs">
-        <label for="oorfs">Outside of RFS Report</label>
-      </li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>Reassignment Planner</h2>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Live-In</th>
-        <th>Split Shift</th>
-        <th>Availability</th>
-        <th>Remaining</th>
-      </tr>
-      <tr>
-        <td>
-          <input type="text" placeholder="Type name here...">
-        </td>
-        <td>
-          <input type="number" min="0">
-        </td>
-        <td>
-          <input type="number" min="0">
-        </td>
-        <td>
-          <input type="number" min="0" id="available">
-        </td>
-        <td>
-          <button id="decreaseBtn">-</button>
-          <p id="counter">0</p>
-          <button id="increaseBtn">+</button>
-        </td>
-      </tr>
-    </table>
-  </section>
+  <div class="container">
+    <section id="calendar">
+      <h2>Calendar</h2>
+      <label for="dateInput">Today's Date</label>
+      <input type="date" id="dateInput">
+      <button id="submitButton">→</button>
+      <ul id="results"></ul>
+    </section>
+    <section id="emails">
+      <h2>Emails</h2>
+      <ol>
+        <li>
+          <input type="checkbox" id="hf02">
+          <label for="hf02">HF02 RFS Report</label>
+        </li>
+        <li>
+          <input type="checkbox" id="hf">
+          <label for="hf">HF/MAP RFS Report</label>
+        </li>
+        <li>
+          <input type="checkbox" id="oorfs">
+          <label for="oorfs">Outside of RFS Report</label>
+        </li>
+      </ol>
+    </section>
+    <section id="reassignments">
+      <h2>Reassignment Planner</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Live-In</th>
+          <th>Split Shift</th>
+          <th>Expedited</th>
+          <th>Availability</th>
+          <th>Remaining</th>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" placeholder="Type name here...">
+          </td>
+          <td>
+            <input type="number" min="0">
+          </td>
+          <td>
+            <input type="number" min="0">
+          </td>
+          <td>
+            <input type="number" min="0">
+          </td>
+          <td>
+            <input type="number" min="0" id="available">
+          </td>
+          <td>
+            <button id="decreaseBtn">-</button>
+            <p id="counter">0</p>
+            <button id="increaseBtn">+</button>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
 </body>
 </html>
