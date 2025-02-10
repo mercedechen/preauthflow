@@ -32,7 +32,7 @@ function calculateDates() {
   }
 
   // Days to calculate
-  const daysToSubtract = [3, 7, 12, 13, 14, 15, 26, 27, 28];
+  const daysToSubtract = [1, 2, 3, 7, 11, 12, 13, 14, 15, 26, 27, 28];
 
   //.forEach() Array method executes a provided function once for each array element.
   daysToSubtract.forEach((days, index) => {

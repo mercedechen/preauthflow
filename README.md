@@ -1,2 +1,7 @@
 # PreAuthFlow
-This productivity application was created to alleviate the demands associated to the position of a Pre-Authorization Coordinator. It was specifically designed to assist my current field of work.
+*Pre-Authorization + Workflow = PreAuthFlow*
+
+This is a productivity application created to organize and assist with the demands associated to a Pre-Authorization Coordinator. It was specifically designed to assist my current field of work.
+
+## Demo
+You can access the demo [here](https://mercedechen.github.io/preauth-app/).
