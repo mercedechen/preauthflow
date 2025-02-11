@@ -60,11 +60,6 @@ function calculateDates() {
     const dayOfMonth = isoDate.split("-")[2];
     const year = isoDate.split("-")[0];
 
-    // const listItem = document.createElement("li");
-    // [MM]/[DD]/[YYYY]
-    // listItem.textContent = `Day ${day}: ${month}/${dayOfMonth}/${year}`;
-    // results.appendChild(listItem);
-
     const listItem = `Day ${day}: ${month}/${dayOfMonth}/${year}`;
 
     specList += `<li> ${listItem}</li>`;
