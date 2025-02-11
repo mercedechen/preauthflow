@@ -1,4 +1,6 @@
 const dateInput = document.getElementById("dateInput");
+const regular = document.getElementById("regular");
+const special = document.getElementById("special");
 const submitButton = document.getElementById("submitButton");
 const increaseBtn = document.getElementById("increaseBtn");
 const decreaseBtn = document.getElementById("decreaseBtn");
@@ -33,6 +35,10 @@ function calculateDates() {
 
   // Days to calculate
   const daysToSubtract = [1, 2, 3, 7, 11, 12, 13, 14, 15, 26, 27, 28];
+  const daysToFilter = [3, 7, 13, 14, 15, 28];
+
+  let regList = "";
+  let specList = "";
 
   //.forEach() Array method executes a provided function once for each array element.
   daysToSubtract.forEach((days, index) => {
@@ -54,10 +60,21 @@ function calculateDates() {
     const dayOfMonth = isoDate.split("-")[2];
     const year = isoDate.split("-")[0];
 
-    const listItem = document.createElement("li");
+    // const listItem = document.createElement("li");
     // [MM]/[DD]/[YYYY]
-    listItem.textContent = `Day ${day}: ${month}/${dayOfMonth}/${year}`;
-    results.appendChild(listItem);
+    // listItem.textContent = `Day ${day}: ${month}/${dayOfMonth}/${year}`;
+    // results.appendChild(listItem);
+
+    const listItem = `Day ${day}: ${month}/${dayOfMonth}/${year}`;
+
+    specList += `<li> ${listItem}</li>`;
+
+    if (daysToFilter.includes(days)){
+      regList += `<li>${listItem}</li>`
+    }
+
+    regular.innerHTML = regList;
+    special.innerHTML = specList;
   });
 };
 
