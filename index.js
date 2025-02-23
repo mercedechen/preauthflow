@@ -34,7 +34,7 @@ function calculateDates() {
   }
 
   // Days to calculate
-  const daysToSubtract = [1, 2, 3, 7, 11, 12, 13, 14, 15, 26, 27, 28];
+  const daysToSubtract = [7, 11, 12, 13, 14, 15, 26, 27, 28, 1, 2, 3];
   const daysToFilter = [3, 7, 13, 14, 15, 28];
 
   let regList = "";
