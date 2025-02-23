@@ -14,7 +14,7 @@ body {
   background-color: #0A1A45;
   font-family: 'Calibri', Arial, Helvetica, sans-serif;
   color: #FFFFFF;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -50,7 +50,7 @@ h2 {
 
 ul {
   list-style-type: none;
-  height: 200px;
+  height: 180px;
   margin: 10px 0px 0px 0px;
   padding: 0;
 }
@@ -78,7 +78,7 @@ ul {
   grid-area: 1/2/4/3;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 25px 0px 0px 0px;
-  height: 100vh;
+  height: 80vh;
   padding: 168px 0px 0px 100px;
 }
 
@@ -95,12 +95,13 @@ td {
 
 td input {
   font-family: 'Calibri', Arial, Helvetica, sans-serif;
+  font-style: italic;
   font-size: 16px;
   color: #43474A;
   margin-right: 50px;
   padding: 4px 13px;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 #livein, #split, #available, #remaining {
