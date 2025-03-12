@@ -24,104 +24,22 @@
 
     <section id="reassignments">
       <h1>Reassignment Planner</h1>
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Live-In</th>
-          <th>Split Shift</th>
-          <th>Expedited</th>
-          <th>Availability</th>
-          <th>Remaining</th>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" id="name" placeholder="Type name here...">
-          </td>
-          <td>
-            <input type="number" id="livein" min="0">
-          </td>
-          <td>
-            <input type="number" id="split" min="0">
-          </td>
-          <td>
-            <input type="checkbox" id="expedited" min="0">
-          </td>
-          <td>
-            <input type="number" min="0" id="available">
-          </td>
-          <td>
-            <button id="decreaseBtn">-</button>
-            <p id="counter">0</p>
-            <button id="increaseBtn">+</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" id="name" placeholder="Type name here...">
-          </td>
-          <td>
-            <input type="number" id="livein" min="0">
-          </td>
-          <td>
-            <input type="number" id="split" min="0">
-          </td>
-          <td>
-            <input type="checkbox" id="expedited" min="0">
-          </td>
-          <td>
-            <input type="number" min="0" id="available">
-          </td>
-          <td>
-            <button id="decreaseBtn">-</button>
-            <p id="counter">0</p>
-            <button id="increaseBtn">+</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" id="name" placeholder="Type name here...">
-          </td>
-          <td>
-            <input type="number" id="livein" min="0">
-          </td>
-          <td>
-            <input type="number" id="split" min="0">
-          </td>
-          <td>
-            <input type="checkbox" id="expedited" min="0">
-          </td>
-          <td>
-            <input type="number" min="0" id="available">
-          </td>
-          <td>
-            <button id="decreaseBtn">-</button>
-            <p id="counter">0</p>
-            <button id="increaseBtn">+</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" id="name" placeholder="Type name here...">
-          </td>
-          <td>
-            <input type="number" id="livein" min="0">
-          </td>
-          <td>
-            <input type="number" id="split" min="0">
-          </td>
-          <td>
-            <input type="checkbox" id="expedited" min="0">
-          </td>
-          <td>
-            <input type="number" min="0" id="available">
-          </td>
-          <td>
-            <button id="decreaseBtn">-</button>
-            <p id="counter">0</p>
-            <button id="increaseBtn">+</button>
-          </td>
-        </tr>
-      </table>
+      <form>
+        <table id="reassignTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Live-In</th>
+              <th>Split Shift</th>
+              <th>Expedited</th>
+              <th>Availability</th>
+              <th>Remaining</th>
+            </tr>
+          </thead>
+          <tbody id="reassignInput">
+          </tbody>
+        </table>
+      </form>
     </section>
   </div>
 </body>

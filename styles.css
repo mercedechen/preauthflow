@@ -89,10 +89,6 @@ th {
   text-transform: uppercase;
 }
 
-td {
-  padding: 0;
-}
-
 td input {
   font-family: 'Calibri', Arial, Helvetica, sans-serif;
   font-style: italic;
@@ -102,23 +98,4 @@ td input {
   padding: 4px 13px;
   border: none;
   border-radius: 5px;
-}
-
-#livein, #split, #available, #remaining {
-  width: 20px;
-}
-
-td button {
-  border: 1px solid #FFFFFF;
-  border-radius: 15px;
-  width: 23px;
-  height: 23px;
-  margin: 5px 10px;
-  background-color: #73AF01;
-  color: #FFFFFF;
-}
-
-/* Keeps table rows to span 1 line */
-p {
-  display: inline;
 }

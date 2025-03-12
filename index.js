@@ -2,10 +2,8 @@ const dateInput = document.getElementById("dateInput");
 const regular = document.getElementById("regular");
 const special = document.getElementById("special");
 const submitButton = document.getElementById("submitButton");
-const increaseBtn = document.getElementById("increaseBtn");
-const decreaseBtn = document.getElementById("decreaseBtn");
-const counter = document.getElementById("counter");
-const available = document.getElementById("available");
+const reassignTable = document.getElementById("reassignTable");
+const reassignInput = document.getElementById("reassignInput");
 let count = 0;
 
 // Adds an event listener and waits for when user clicks on "calculate" button to run the calculateDates() function
@@ -13,16 +11,6 @@ submitButton.addEventListener("click", () => {
   calculateDates();
   // submitButton.disabled = true;
 });
-
-// Adds an event listener and waits for when user clicks on "+" button to run the increaseCounter() function
-increaseBtn.addEventListener("click", () => {
-  increaseCounter();
-});
-
-// Adds an event listener that waits for when user clicks on "-" button to run the decreaseCounter() function
-decreaseBtn.addEventListener("click", () => {
-  decreaseCounter();
-})
 
 function calculateDates() {
   // Date() is a constructor that creates a Date object. When called as a function, it returns a string representing the current time.
@@ -73,16 +61,16 @@ function calculateDates() {
   });
 };
 
-// Increments the counter by 1
-function increaseCounter() {
-  count++;
-  counter.textContent = count;
-};
-
-// Decrements the counter by 1 only if the counter value is greater than 0
-function decreaseCounter() {
-  if (count > 0){
-    count--;
-    counter.textContent = count;
-  }
+// For loop that repeats creating a new row up to 15 rows containing the following data inputs: Name, Live-In, Split Shift, Expedited, Availability and Remaining
+for (i=1; i<=15; i++){
+  const row = document.createElement("tr");
+  row.innerHTML = `
+        <td><input type="text"></input></td>
+        <td><input type="number" min="0" max="4"></input></td>
+        <td><input type="number" min="0" max="4"></input></td>
+        <td><input type="number" min="0" max="1"></input></td>
+        <td><input type="number" min="0" max="6"></input></td>
+        <td><input type="number" min="0" max="6"></input></td>
+  `;
+  reassignInput.appendChild(row);
 };
