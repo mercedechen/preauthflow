@@ -1,6 +1,7 @@
 const dateInput = document.getElementById("dateInput");
-const regular = document.getElementById("regular");
-const special = document.getElementById("special");
+const regDates = document.getElementById("regDates");
+const friDates = document.getElementById("friDates");
+const holiDates = document.getElementById("holiDates")
 const submitButton = document.getElementById("submitButton");
 const reassignTable = document.getElementById("reassignTable");
 const reassignInput = document.getElementById("reassignInput");
@@ -22,11 +23,14 @@ function calculateDates() {
   }
 
   // Days to calculate
-  const daysToSubtract = [7, 11, 12, 13, 14, 15, 26, 27, 28, 1, 2, 3];
+  const daysToSubtract = [7, 11, 12, 13, 14, 15, 25, 26, 27, 28, 1, 2, 3];
   const daysToFilter = [3, 7, 13, 14, 15, 28];
+  const friDaysToFilter = [1, 2, 3, 7, 12, 13, 14, 15, 26, 27, 28];
 
   let regList = "";
-  let specList = "";
+  let friList = "";
+  let holiList = "";
+
 
   //.forEach() Array method executes a provided function once for each array element.
   daysToSubtract.forEach((days, index) => {
@@ -50,27 +54,18 @@ function calculateDates() {
 
     const listItem = `Day ${day}: ${month}/${dayOfMonth}/${year}`;
 
-    specList += `<li> ${listItem}</li>`;
+    holiList += `<li> ${listItem}</li>`;
 
     if (daysToFilter.includes(days)){
       regList += `<li>${listItem}</li>`
     }
 
-    regular.innerHTML = regList;
-    special.innerHTML = specList;
-  });
-};
+    if (friDaysToFilter.includes(days)){
+      friList += `<li>${listItem}</li>`
+    }
 
-// For loop that repeats creating a new row up to 15 rows containing the following data inputs: Name, Live-In, Split Shift, Expedited, Availability and Remaining
-for (i=1; i<=15; i++){
-  const row = document.createElement("tr");
-  row.innerHTML = `
-        <td><input type="text"></input></td>
-        <td><input type="number" min="0" max="4"></input></td>
-        <td><input type="number" min="0" max="4"></input></td>
-        <td><input type="number" min="0" max="1"></input></td>
-        <td><input type="number" min="0" max="6"></input></td>
-        <td><input type="number" min="0" max="6"></input></td>
-  `;
-  reassignInput.appendChild(row);
+    regDates.innerHTML = regList;
+    friDates.innerHTML = friList;
+    holiDates.innerHTML = holiList;
+  });
 };
