@@ -12,35 +12,26 @@
   <div class="container">
     <a href="https://mercedechen.github.io/preauth-app/"><img src="assets/preauthflow-logo.png" alt="logo" id="logo"></a>
 
-    <section id="calendar">
-      <h1>Calendar</h1>
-      <h2><label for="dateInput">Today's Date</label></h2>
-      <input type="date" id="dateInput">
-      <button id="submitButton">→</button>
-      <ul id="regular"></ul>
-      <h2>Fridays & Holidays</h2>
-      <ul id="special"></ul>
-    </section>
+    <div id="date">
+      <h1><label for="dateInput">Today's Date</label></h1>
+      <div id="date-box">
+        <input type="date" id="dateInput">
+        <button id="submitButton">➔</button>
+      </div>
+    </div>
 
-    <section id="reassignments">
-      <!-- <h1>Reassignment Planner</h1>
-      <form>
-        <table id="reassignTable">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Live-In</th>
-              <th>Split Shift</th>
-              <th>Expedited</th>
-              <th>Availability</th>
-              <th>Remaining</th>
-            </tr>
-          </thead>
-          <tbody id="reassignInput">
-          </tbody>
-        </table>
-      </form> -->
-    </section>
+    <div id="weekday">
+      <h2>Weekday</h2>
+      <ul id="regular"></ul>
+    </div>
+
+    <div id="friday">
+      <h2>Friday</h2>
+    </div>
+
+    <div id="holiday">
+      <h2>Holiday</h2>
+    </div>
   </div>
 </body>
 </html>
