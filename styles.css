@@ -24,7 +24,12 @@ body {
   line-height: 1.5;
 }
 
-.container{
+a, a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(3, 300px);
   justify-content: center;
@@ -52,7 +57,6 @@ h2 {
 
 ul {
   list-style-type: none;
-  height: 180px;
   margin: 10px 0px 0px 0px;
   padding: 0;
 }
@@ -83,6 +87,14 @@ ul {
   border: none;
   height: 25px;
   width: 25px;
+}
+
+#docs {
+  grid-area: 3/1/4/2;
+}
+
+#docs li {
+  list-style-type: disc;
 }
 
 #weekday, #friday, #holiday {
